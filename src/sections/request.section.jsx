@@ -8,10 +8,9 @@ const RequestContainer = styled.div`
 
 const FormHolder = styled.div`
     background-color: ${({theme}) => theme.color.primary};
-    z-index: 1000;
     position: relative;
     margin: 30px;
-    padding-top 20px;
+    padding: 10px 0;
     box-sizing: border-box;
     margin-top: -50px;
     box-shadow: 0px 0px 20px 11px rgb(0 0 0 / 9%);

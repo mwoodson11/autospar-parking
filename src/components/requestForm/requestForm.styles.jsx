@@ -6,7 +6,7 @@ export const FormBox = styled.form`
     display: flex;
     // flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     @media screen and (max-width: 800px) {
         width: 80%;
         flex-direction: column;
@@ -15,6 +15,7 @@ export const FormBox = styled.form`
 
 export const InputBox = styled.div`
     width: 200px;
+    margin: 0 5px;
     @media screen and (max-width: 800px) {
         width: 100%;
     }

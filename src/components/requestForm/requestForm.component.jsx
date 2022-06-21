@@ -92,9 +92,9 @@ const ContactForm = () => {
                     label="Email"
                     required />
             </InputBox> */}
-            <FormButtons>
+            {/* <FormButtons> */}
                 <CustomButton type="submit">Request a Call </CustomButton>
-            </FormButtons>
+            {/* </FormButtons> */}
         </FormBox>
     );
 };

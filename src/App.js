@@ -4,6 +4,8 @@ import './App.css';
 import HomeSection from './sections/home.section';
 import RequestSection from './sections/request.section';
 import SaveSection from './sections/save.section';
+import WhySection from './sections/why.section';
+import TestimonialSection from './sections/testimonials.section';
 
 function App() {
     return (
@@ -12,6 +14,8 @@ function App() {
             <HomeSection />
             <RequestSection />
             <SaveSection />
+            <WhySection />
+            <TestimonialSection />
             <Footer />
         </>
     );

@@ -7,7 +7,7 @@ export const BannerContainer = styled.div`
     width: 100%;
     position: relative;
     // ${props => props.full ? "min-height: 100vh" : "height: 250px"};
-    height: ${props => props.full ? "100vh" : "250px"};
+    height: ${props => props.full ? "100vh" : "500px"};
     // height: 100%;
 `;
 
