@@ -5,6 +5,7 @@ export const TestimonialContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 70%;
 `;
 
 export const TestimonialImageContainer = styled.div`

@@ -6,6 +6,8 @@ import RequestSection from './sections/request.section';
 import SaveSection from './sections/save.section';
 import WhySection from './sections/why.section';
 import TestimonialSection from './sections/testimonials.section';
+import ServiceSection from './sections/services.section';
+import RateSection from './sections/rates.section';
 
 function App() {
     return (
@@ -15,7 +17,9 @@ function App() {
             <RequestSection />
             <SaveSection />
             <WhySection />
+            <ServiceSection />
             <TestimonialSection />
+            <RateSection />
             <Footer />
         </>
     );
