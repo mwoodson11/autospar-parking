@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const FormBox = styled.form`
     width: 90%;
     margin: auto;
-    display: flex;
-    // flex-direction: column;
+    // display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     @media screen and (max-width: 800px) {
         width: 80%;
-        flex-direction: column;
+        // flex-direction: column;
     }
 `;
 

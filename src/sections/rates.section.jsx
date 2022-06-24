@@ -18,6 +18,7 @@ const RateContent = styled.div`
 
 const RateSection = () => {
     return (
+        <div id="rate">
         <RateContainer>
             <RateHeader>Parking Options and Rates</RateHeader>
             <RateContent>
@@ -39,6 +40,7 @@ const RateSection = () => {
             </RateContent>
             
         </RateContainer>
+        </div>
     );
 };
 

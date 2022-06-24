@@ -4,25 +4,25 @@ import React, { useRef, useState } from 'react';
 import FormInput from '../formInput/formInput.component';
 import CustomButton from '../customButton/customButton.component';
 import {
-    ErrorMessage,
+    // ErrorMessage,
     FormBox,
     // FormInputLabel,
     // TextArea,
-    FormButtons,
+    // FormButtons,
     InputBox,
     // ReCaptchaDiv
 } from './requestForm.styles'
 import SelectInput from '../selectInput/selectInput.component';
 
-const ContactForm = () => {
+const RequestForm = () => {
 
     const formRef = useRef();
     const [user, setUser] = useState({ email: '', name: '', phone: '', level: ''});
-    const [submitMessage, setMessage] = useState('');
-    const [errorMessage, setError] = useState('');
+    // const [submitMessage, setMessage] = useState('');
+    // const [errorMessage, setError] = useState('');
     // const [isDisabled, toggleDisable] = useState(true);
 
-    let { email, name, phone, level } = user;
+    let { name, phone, level } = user;
     const handleSubmit =  async event => {
         event.preventDefault();
         // emailjs.sendForm(
@@ -50,8 +50,8 @@ const ContactForm = () => {
 
     return (
         <FormBox ref={formRef} onSubmit={handleSubmit}>
-            {submitMessage}
-            <ErrorMessage>{errorMessage}</ErrorMessage>
+            {/* {submitMessage} */}
+            {/* <ErrorMessage>{errorMessage}</ErrorMessage> */}
             <InputBox>
             <SelectInput 
                 label="Select your level:" 
@@ -83,15 +83,6 @@ const ContactForm = () => {
                 label="Phone Number"
                 required />
             </InputBox>
-            {/* <InputBox>
-                <FormInput 
-                    name="email" 
-                    type="email" 
-                    value={email} 
-                    onChange={handleChange}
-                    label="Email"
-                    required />
-            </InputBox> */}
             {/* <FormButtons> */}
                 <CustomButton type="submit">Request a Call </CustomButton>
             {/* </FormButtons> */}
@@ -99,4 +90,4 @@ const ContactForm = () => {
     );
 };
 
-export default ContactForm;
+export default RequestForm;

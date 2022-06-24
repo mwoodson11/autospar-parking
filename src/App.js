@@ -1,5 +1,4 @@
 import Header from './components/header/header.component';
-import Footer from './components/footer/footer.component';
 import './App.css';
 import HomeSection from './sections/home.section';
 import RequestSection from './sections/request.section';
@@ -8,6 +7,7 @@ import WhySection from './sections/why.section';
 import TestimonialSection from './sections/testimonials.section';
 import ServiceSection from './sections/services.section';
 import RateSection from './sections/rates.section';
+import FooterSection from './sections/footer.section';
 
 function App() {
     return (
@@ -20,7 +20,7 @@ function App() {
             <ServiceSection />
             <TestimonialSection />
             <RateSection />
-            <Footer />
+            <FooterSection />
         </>
     );
 }

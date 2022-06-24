@@ -15,11 +15,17 @@ const TestObj = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @media screen and (max-width: 800px) {
+        justify-content: flex-start;
+    }
 `;
 
 const HomeTitle = styled.h1`
     font-size: 50px;
     margin: 0;
+    @media screen and (max-width: 800px) {
+        font-size: 40px;
+    }
 `;
 
 const HomeDescription = styled.div`

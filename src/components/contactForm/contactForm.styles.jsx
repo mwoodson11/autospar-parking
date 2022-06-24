@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import ReCAPTCHA from 'react-google-recaptcha';
 
 export const FormBox = styled.form`
     width: 90%;
@@ -7,6 +6,7 @@ export const FormBox = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 20px;
     @media screen and (max-width: 800px) {
         width: 80%;
     }
@@ -28,7 +28,7 @@ export const TextArea = styled.textarea`
     font-size: 18px;
     padding: 10px 5px 10px 5px;
     display: block;
-    width: 90%;
+    width: 100%;
     border-radius: 0;
     border: 1px solid ${({theme}) => theme.color.primary};
     margin: 5px 0 25px 0;
@@ -53,17 +53,5 @@ export const FormButtons = styled.div`
     justify-content: flex-start;
     @media screen and (max-width: 800px) {
         justify-content: center;
-    }
-`;
-
-export const ReCaptchaDiv = styled(ReCAPTCHA)`
-
-    @media screen and (max-width: 800px) {
-        & > div > div {
-            margin: auto;
-        }
-    }
-    @media screen and (max-width: 200px) {
-        overflow: hidden;
     }
 `;

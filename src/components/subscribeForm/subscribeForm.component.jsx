@@ -4,24 +4,21 @@ import React, { useRef, useState } from 'react';
 import FormInput from '../formInput/formInput.component';
 import CustomButton from '../customButton/customButton.component';
 import {
-    ErrorMessage,
+    // ErrorMessage,
     FormBox,
-    // FormInputLabel,
-    // TextArea,
     FormButtons,
-    // ReCaptchaDiv
 } from './subscribeForm.styles'
-import SelectInput from '../selectInput/selectInput.component';
+// import SelectInput from '../selectInput/selectInput.component';
 
-const ContactForm = () => {
+const SubscribeForm = () => {
 
     const formRef = useRef();
-    const [user, setUser] = useState({ email: '', name: '', phone: '', level: ''});
-    const [submitMessage, setMessage] = useState('');
-    const [errorMessage, setError] = useState('');
+    const [user, setUser] = useState({ email: ''});
+    // const [submitMessage, setMessage] = useState('');
+    // const [errorMessage, setError] = useState('');
     // const [isDisabled, toggleDisable] = useState(true);
 
-    let { email, name, phone, level } = user;
+    let { email } = user;
     const handleSubmit =  async event => {
         event.preventDefault();
         // emailjs.sendForm(
@@ -49,47 +46,21 @@ const ContactForm = () => {
 
     return (
         <FormBox ref={formRef} onSubmit={handleSubmit}>
-            {submitMessage}
-            <ErrorMessage>{errorMessage}</ErrorMessage>
-            <SelectInput 
-                label="Select your level:" 
-                value={level}
-                onChange={handleChange}
-                name="level"
-            >
-                <option value=""></option>
-                <option value="first">First Floor</option>
-                <option value="second">Second Floor</option>
-            </SelectInput>
-            <FormInput 
-                name="name"
-                type="text"
-                value={name}
-                onChange={handleChange}
-                label="Name"
-                required
-            /> 
-            <FormInput 
-                name="phone" 
-                type="tel" 
-                value={phone} 
-                onChange={handleChange}
-                label="Phone Number"
-                required />
-
+            {/* {submitMessage} */}
+            {/* <ErrorMessage>{errorMessage}</ErrorMessage> */}
             <FormInput 
                 name="email" 
                 type="email" 
                 value={email} 
                 onChange={handleChange}
-                label="Email"
+                label="Enter your email"
                 required />
 
             <FormButtons>
-                <CustomButton type="submit"> Send Message </CustomButton>
+                <CustomButton type="submit">Subscribe</CustomButton>
             </FormButtons>
         </FormBox>
     );
 };
 
-export default ContactForm;
+export default SubscribeForm;

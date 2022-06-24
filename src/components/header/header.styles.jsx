@@ -60,6 +60,21 @@ export const HeaderOption = styled(Link)`
     }
 `;
 
+export const NavBackdrop = styled.div`
+    display: none;
+    @media screen and (max-width: 800px) {
+        top: 0;
+        z-index: 49;
+        background-color: rgba(0,0,0,0.7);
+        position: fixed;
+        display: flex;
+        height: ${props => props.opened ? "100%" : "0"};
+        width: 100%;
+        opacity: ${props => props.opened ? "1" : "0"};
+        transition: opacity .4s ease;
+    }
+`;
+
 export const HeaderLogo = styled(Link)`
     display: flex;
     font-size: 30px;
@@ -106,7 +121,7 @@ export const ToggleContainer = styled.div`
 
 const IconCss = css`
     display: none;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 10px;
     margin: 10px;
     color: ${({theme}) => theme.color.primary};

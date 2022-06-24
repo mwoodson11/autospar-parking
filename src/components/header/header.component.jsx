@@ -6,7 +6,8 @@ import {
     HeaderOption,
     HeaderLogo,
     NavIcon,
-    NavCloseIcon
+    NavCloseIcon,
+    NavBackdrop
 } from './header.styles';
 
 const Header = () => {
@@ -45,6 +46,8 @@ const Header = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, [scrollHide]);
     return (
+        <>
+        <NavBackdrop opened={opened} onClick={handleOpenClick} />
         <HeaderContainer hidden={scrollHide}>
             <HeaderLogo 
                 activeClass="active"
@@ -111,6 +114,7 @@ const Header = () => {
             <NavIcon onClick={handleOpenClick} opened={opened}/>
             <NavCloseIcon onClick={handleOpenClick} opened={opened}/>
         </HeaderContainer>
+        </>
     )
 };
 
