@@ -1,4 +1,5 @@
 import styled, {css} from "styled-components";
+import { motion }  from 'framer-motion';
 
 import { Link } from 'react-scroll';
 import { AiOutlineMenu } from 'react-icons/ai';
@@ -30,6 +31,34 @@ export const HeaderContainer = styled.div`
     }
 `;
 
+export const HeaderContainerMobile = styled(motion.div)`
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: ${({theme}) => theme.color.secondary};
+    position: fixed;
+    // top: ${props => props.opened ? '0' : '-90vh'};
+    align-items: center;
+    z-index: 998;
+    // transition: all .4s ease;
+    box-sizing: border-box;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    // @media screen and (max-width: 800px) {
+    //     display: none;
+    // }
+
+    @media screen and (max-width: 200px) {
+        overflow: hidden;
+    }
+`;
+
 export const HeaderOptions = styled.div`
     height: 100%;
     display: flex;
@@ -40,6 +69,31 @@ export const HeaderOptions = styled.div`
 `;
 
 export const HeaderOption = styled(Link)`
+    padding: 10px 15px;
+    color: inherit;
+    opacity: 1;
+    transition: color .3s ease;
+    cursor: pointer;
+
+    &:hover {
+        color: ${({theme}) => theme.color.accent};
+    }
+
+    // &.active {
+    //     color: ${({theme}) => theme.color.accent};
+    // }
+
+    &:focus {
+        outline: none;
+        color: unset;
+    }
+`;
+
+export const MobileLinkBox = styled(motion.div)`
+    padding: 10px 0;
+`;
+
+export const HeaderOptionMobile = styled(motion(Link))`
     padding: 10px 15px;
     color: inherit;
     opacity: 1;
