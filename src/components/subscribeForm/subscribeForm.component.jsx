@@ -54,6 +54,7 @@ const SubscribeForm = () => {
                 value={email} 
                 onChange={handleChange}
                 label="Enter your email"
+                color={'white'}
                 required />
 
             <FormButtons>

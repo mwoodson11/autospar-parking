@@ -8,7 +8,7 @@ import {
     FormBox,
     // FormInputLabel,
     // TextArea,
-    // FormButtons,
+    FormButtons,
     InputBox,
     // ReCaptchaDiv
 } from './requestForm.styles'
@@ -83,9 +83,9 @@ const RequestForm = () => {
                 label="Phone Number"
                 required />
             </InputBox>
-            {/* <FormButtons> */}
+            <FormButtons>
                 <CustomButton type="submit">Request a Call </CustomButton>
-            {/* </FormButtons> */}
+            </FormButtons>
         </FormBox>
     );
 };

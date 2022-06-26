@@ -3,20 +3,24 @@ import styled from "styled-components";
 export const FormBox = styled.form`
     width: 90%;
     margin: auto;
-    // display: flex;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         width: 80%;
-        // flex-direction: column;
+        flex-direction: column;
     }
 `;
 
 export const InputBox = styled.div`
-    width: 200px;
+    width: 250px;
     margin: 0 5px;
-    @media screen and (max-width: 800px) {
+
+    @media screen and (max-width: 1200px) {
+        width: 200px;
+    }
+    @media screen and (max-width: 1000px) {
         width: 100%;
     }
 `;
@@ -48,7 +52,7 @@ export const TextArea = styled.textarea`
         border: 1px solid ${({theme}) => theme.color.primary};
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         width: 100%;
     }
 `;
@@ -60,7 +64,10 @@ export const ErrorMessage = styled.div`
 export const FormButtons = styled.div`
     display: flex;
     justify-content: flex-start;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
     }
 `;

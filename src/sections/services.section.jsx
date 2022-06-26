@@ -13,16 +13,25 @@ const ServiceContainer = styled.div`
     color: ${({theme}) => theme.color.secondary};
 `;
 
-const ServiceHeader = styled.div``;
+const ServiceHeader = styled.div`
+    width: 800px;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+`;
 
 const ServiceHeaderTitle = styled.h1``;
 
 const ServiceHeaderDesc = styled.div``;
 
-const ServiceBoxHolder = styled.div``;
+const ServiceBoxHolder = styled.div`
+    width: 800px;
+    max-width: 100%;
+`;
 
 const ServiceBox = styled.div`
     display: flex;
+    margin: 20px 0;
 
     @media screen and (max-width: 800px) {
         flex-direction: column;
@@ -44,6 +53,8 @@ const ServiceIcon = styled.div`
 const ServiceBoxContent = styled.div`
     display: flex;
     flex-direction: column;
+    padding: 0 20px;
+    box-sizing: border-box;
     
     @media screen and (max-width: 800px) {
         justify-content: center;
@@ -52,7 +63,9 @@ const ServiceBoxContent = styled.div`
     }
 `;
 
-const ServiceBoxTitle = styled.h3``;
+const ServiceBoxTitle = styled.h3`
+    margin: 0 0 05px;
+`;
 
 const ServiceBoxDescription = styled.div`
     @media screen and (max-width: 800px) {

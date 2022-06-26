@@ -10,6 +10,7 @@ import {
     FormInputLabel,
     TextArea,
     FormButtons,
+    InputBox,
 } from './contactForm.styles'
 
 const ContactForm = () => {
@@ -50,28 +51,38 @@ const ContactForm = () => {
         <FormBox ref={formRef} onSubmit={handleSubmit}>
             {/* {submitMessage} */}
             {/* <ErrorMessage>{errorMessage}</ErrorMessage> */}
+            <InputBox>
             <FormInput 
                 name="name"
                 type="text"
                 value={name}
                 onChange={handleChange}
                 label="Name"
+                color={'white'}
                 required
             /> 
+            </InputBox>
+            <InputBox>
             <FormInput 
                 name="email" 
                 type="email" 
                 value={email} 
                 onChange={handleChange}
                 label="Email"
+                color={'white'}
                 required />
+            </InputBox>
+            <InputBox>
             <FormInput 
                 name="phone" 
                 type="tel" 
                 value={phone} 
                 onChange={handleChange}
                 label="Phone Number"
+                color={'white'}
                 required />
+            </InputBox>
+            <InputBox>
             <FormInputLabel>Message</FormInputLabel>
             <TextArea 
                 name="message" 
@@ -81,6 +92,7 @@ const ContactForm = () => {
                 rows="6"
                 required 
             />
+            </InputBox>
             <FormButtons>
                 <CustomButton type="submit"> Send Message </CustomButton>
             </FormButtons>

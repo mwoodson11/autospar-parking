@@ -20,7 +20,7 @@ const SaveBox = styled.div`
     align-items: center;
     text-align: center;
     flex-direction: column;
-    padding: 20px 0;
+    padding: 20px;
 
     // @media screen and (max-width: 800px) {
     //     flex-direction: column;

@@ -2,13 +2,21 @@ import styled from "styled-components";
 
 export const FormBox = styled.form`
     width: 90%;
-    // display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
     @media screen and (max-width: 800px) {
         width: 80%;
+    }
+`;
+
+export const InputBox = styled.div`
+    width: 100%;
+    // margin: 10px 0;
+    @media screen and (max-width: 800px) {
+        width: 100%;
     }
 `;
 
@@ -24,7 +32,7 @@ export const TextArea = styled.textarea`
     box-sizing: border-box;
     background: none;
     background-color: ${props => props.theme.color.background};
-    color: ${props => props.theme.color.primary};
+    color: ${props => props.theme.color.secondary};
     font-size: 18px;
     padding: 10px 5px 10px 5px;
     display: block;

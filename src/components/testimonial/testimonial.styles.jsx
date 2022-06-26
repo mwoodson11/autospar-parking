@@ -33,4 +33,10 @@ export const TestimonialContent = styled.div`
 
 export const TestimonialTitle = styled.h3``;
 
-export const TestimonialDescription = styled.p``;
+export const TestimonialDescription = styled.p`
+    overflow-y: auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    height: 100px;
+    margin: 2px 0;
+`;
